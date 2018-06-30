@@ -1,0 +1,2 @@
+include ':app', ':lassetools'
+project(':lassetools').projectDir = new File('lassetools')
