@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.lasselindh.tools.LassePermission;
 import com.lasselindh.tools.LasseTools;
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btTest3).setOnClickListener(this);
         findViewById(R.id.btTest4).setOnClickListener(this);
 
-        LasseTools.getInstance().init(this);
+        LasseTools.getInstance().init(this, BuildConfig.DEBUG);
         LasseTools.getInstance().setScreen(this);
     }
 
@@ -103,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     case LassePermission.ALWAYS_DENIED:
                         break;
                 }
-                LasseTools.DToast(MainActivity.this, "getPermission Result : " + result);
+                Toast.makeText(MainActivity.this, "getPermission Result : " + result, Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -112,16 +113,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         LassePermission.getOverlay(this, new LassePermission.OverlayListener() {
             @Override
             public void onCheckCompleted(boolean result) {
-                LasseTools.DToast(MainActivity.this, "getOverlay Result : " + result);
+                Toast.makeText(MainActivity.this, "getOverlay Result : " + result, Toast.LENGTH_SHORT).show();
             }
         });
     }
 
     public void test3() {
-        LasseTools.DToast(MainActivity.this, "isDevModeEnabled Result : " + LasseTools.getInstance().isDevModeEnabled());
+        Toast.makeText(MainActivity.this, "isDevModeEnabled Result : " + LasseTools.getInstance().isDevModeEnabled(), Toast.LENGTH_SHORT).show();
     }
 
     public void test4() {
-        LasseTools.DToast(MainActivity.this, "isUsbDebuggingEnabled Result : " + LasseTools.getInstance().isUsbDebuggingEnabled());
+        Toast.makeText(MainActivity.this, "isUsbDebuggingEnabled Result : " + LasseTools.getInstance().isUsbDebuggingEnabled(), Toast.LENGTH_SHORT).show();
     }
 }
