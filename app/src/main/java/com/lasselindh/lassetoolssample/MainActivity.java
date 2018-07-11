@@ -6,13 +6,15 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.lasselindh.tools.LassePermission;
 import com.lasselindh.tools.LasseTools;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -63,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return super.onOptionsItemSelected(item);
     }
 
+
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
@@ -95,16 +98,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String[] permissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE};
         LassePermission.getPermission(this, permissions, new LassePermission.PermissionListener() {
             @Override
-            public void onCheckCompleted(int result) {
-                switch(result) {
-                    case LassePermission.GRANTED:
-                        break;
-                    case LassePermission.DENIED:
-                        break;
-                    case LassePermission.ALWAYS_DENIED:
-                        break;
-                }
-                Toast.makeText(MainActivity.this, "getPermission Result : " + result, Toast.LENGTH_SHORT).show();
+            public void onRequestResult(boolean allGranted, ArrayList<String> deniedPermissions) {
+
+                Toast.makeText(MainActivity.this, "getPermission Result : " + allGranted, Toast.LENGTH_SHORT).show();
             }
         });
     }
