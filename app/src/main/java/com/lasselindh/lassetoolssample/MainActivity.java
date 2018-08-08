@@ -115,10 +115,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void test3() {
-        Toast.makeText(MainActivity.this, "isDevModeEnabled Result : " + LasseTools.getInstance().isDevModeEnabled(), Toast.LENGTH_SHORT).show();
+        LasseTools.DToast(MainActivity.this, "isDevModeEnabled Result : " + LasseTools.getInstance().isDevModeEnabled());
     }
 
     public void test4() {
-        Toast.makeText(MainActivity.this, "isUsbDebuggingEnabled Result : " + LasseTools.getInstance().isUsbDebuggingEnabled(), Toast.LENGTH_SHORT).show();
+        LasseTools.DToast(MainActivity.this, "isUsbDebuggingEnabled Result : " + LasseTools.getInstance().isUsbDebuggingEnabled());
+    }
+
+    private void test5() {
+        LasseTools.DToast(MainActivity.this, "Execute private method : Success");
     }
 }
