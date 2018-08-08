@@ -13,7 +13,22 @@ LasseTools는 앱개발에 필요한 여러가지 유틸기능과 디버깅을 �
 LasseTools
 
 
-- 개발전용 토스트
+- 크롬디버깅 연결을 통한 기능(캡쳐, 로그수집, 메서드접근(액티비티/프래그먼트))
+
+  ```
+  // 공통 초기화 설정
+  LasseTools.getInstance().init(this, BuildConfig.DEBUG);
+  
+  1. 메서드 접근을 사용하고자 할 시 Activity or Fragment에서 컨텍스트를 할당
+  1) 접근하고자 하는 화면을 추가
+  LasseTools.getInstance().setScreen(this);
+  2) 앱실행 및 크롬 Inspect를 실행하여 LasseTools를 클릭
+  3) 
+  
+  
+  ```
+  
+  - 개발전용 토스트
 
   로그보다 토스트를 즐겨서 사용하는 분이 많습니다. 하지만 대부분의 폰에서는
   
@@ -39,12 +54,6 @@ LasseTools
 - USB디버깅 옵션 가져오기
   ```
   LasseTools.getInstance().isUsbDebuggingEnabled()
-  ```
-- 크롬디버깅 연결을 통한 기능(캡쳐, 로그수집, 메서드접근(액티비티/프래그먼트))
-
-  초기설정 - Application Class 혹은 초기 Activity 에서 
-  ```
-  LasseTools.getInstance().init(this, BuildConfig.DEBUG);
   ```
 
 
