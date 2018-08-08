@@ -8,25 +8,33 @@ dependenciesdepend  {
 
 LasseTools는 앱개발에 필요한 여러가지 유틸기능과 디버깅을 지원하는 라이브러리 입니다.
 웹뷰 크롬디버깅 및 자바리플렉션을 활용하여 스크립트를 이용하여 
-여러가지 디버깅 기능을 수행하고 스크립트를 통해 자바 메서드에 접근가능한 기능을 제공합니다
+여러가지 디버깅 기능을 수행하고 스크립트를 통해 자바 메서드에 접근가능한 기능을 제공합니다.
+라고 설명했지만 그냥 귀찮아서 필요한 기능 다 때려넣은 라이브러리 입니다.
 
 LasseTools
 
 
 - 크롬디버깅 연결을 통한 기능(캡쳐, 로그수집, 메서드접근(액티비티/프래그먼트))
 
-  ```
+
   // 공통 초기화 설정
+```
   LasseTools.getInstance().init(this, BuildConfig.DEBUG);
-  
+``` 
   1. 메서드 접근을 사용하고자 할 시 Activity or Fragment에서 컨텍스트를 할당
   1) 접근하고자 하는 화면을 추가
-  LasseTools.getInstance().setScreen(this);
-  2) 앱실행 및 크롬 Inspect를 실행하여 LasseTools를 클릭
-  3) 
-  
-  
   ```
+  LasseTools.getInstance().setScreen(this);
+  ```
+  2) 앱실행 및 크롬 Inspect를 실행하여 LasseTools를 클릭
+  3) 스크립트 콘솔에서 
+  ```
+  LasseTools.runMethod("액티비티클래스명", "메서드명");
+  ```
+![inspect](./images/inspect.png)
+  
+  
+
   
   - 개발전용 토스트
 
