@@ -1,3 +1,11 @@
+
+[ ![Download](https://api.bintray.com/packages/hanjuwan/maven/tools/images/download.svg) ](https://bintray.com/hanjuwan/maven/tools/_latestVersion)
+``` 
+dependenciesdepend  {
+    implementation 'com.lasselindh:tools:x.y.z'
+}
+```
+
 LasseTools는 앱개발에 필요한 여러가지 유틸기능과 디버깅을 지원하는 라이브러리 입니다.
 웹뷰 크롬디버깅 및 자바리플렉션을 활용하여 스크립트를 이용하여 
 여러가지 디버깅 기능을 수행하고 스크립트를 통해 자바 메서드에 접근가능한 기능을 제공합니다
