@@ -36,6 +36,8 @@ LasseTools.getInstance().setScreen(this);
 LasseTools.runMethod("액티비티클래스명", "메서드명");
 LasseTools.runMethod("액티비티클래스명", "메서드명", "파라메터", "파라메터변수타입(int/String/boolean)")
 ```
+  ![console](./images/console.png)
+  
   
   웹에서 로그캣을 보기 / 저장
   1) 앱실행 및 크롬 Inspect를 실행하여 LasseTools를 클릭
