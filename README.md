@@ -1,5 +1,7 @@
 
 [ ![Download](https://api.bintray.com/packages/hanjuwan/maven/tools/images/download.svg) ](https://bintray.com/hanjuwan/maven/tools/_latestVersion)
+
+적용방법 
 ``` 
 dependenciesdepend  {
     implementation 'com.lasselindh:tools:x.y.z'
@@ -21,7 +23,7 @@ LasseTools
 ```
   LasseTools.getInstance().init(this, BuildConfig.DEBUG);
 ``` 
-  1. 메서드 접근을 사용하고자 할 시 Activity or Fragment에서 컨텍스트를 할당
+  메서드 접근을 사용하고자 할 시 Activity or Fragment에서 컨텍스트를 할당
   1) 접근하고자 하는 화면을 추가
   ```
   LasseTools.getInstance().setScreen(this);
@@ -32,7 +34,40 @@ LasseTools
   3) 스크립트 콘솔에서 
   ```
   LasseTools.runMethod("액티비티클래스명", "메서드명");
+  LasseTools.runMethod("액티비티클래스명", "메서드명", "파라메터", "파라메터변수타입(int/String/boolean)")
   ```
+  
+  웹에서 로그캣을 보기 / 저장
+  1) 앱실행 및 크롬 Inspect를 실행하여 LasseTools를 클릭
+  
+  2) 웹콘솔에서 아래 명령어 수행
+  
+  3) 아래권한이 필요하므로 메니페스트에 등록해주어야 한다.
+  
+  Manifest.permission.READ_EXTERNAL_STORAGE,
+  Manifest.permission.WRITE_EXTERNAL_STORAGE
+  ```
+  // 웹에서 로그캣을 보여준다. 
+  LasseTools.showLogcat();
+  // 로그캣의 로그를 핸드폰에 저장 
+  LasseTools.saveLogcat();
+  ```
+  
+  웹에서 앱화면을 캡쳐하여 브라우저에서 보기 
+  1) 앱실행 및 크롬 Inspect를 실행하여 LasseTools를 클릭
+  
+  2) 웹콘솔에서 아래 명령어 수행
+  
+  3) 아래권한이 필요하므로 메니페스트에 등록해주어야 한다.
+  
+  Manifest.permission.READ_EXTERNAL_STORAGE,
+  Manifest.permission.WRITE_EXTERNAL_STORAGE
+  ```
+  LasseTools.showScreen();
+  LasseTools.saveScreen();
+  ```
+  
+  
 
   
   
