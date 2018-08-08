@@ -105,25 +105,25 @@ LasseTools.getInstance().isUsbDebuggingEnabled()
 LassePermission
 - 런타임 퍼미션 받기
 
-  ```
-  String[] permissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE};
-  LassePermission.getPermission(this, permissions, new LassePermission.PermissionListener() {
-      @Override
-      public void onRequestResult(boolean allGranted, ArrayList<String> deniedPermissions) {
-          Toast.makeText(MainActivity.this, "getPermission Result : " + allGranted, Toast.LENGTH_SHORT).show();  
-      }
-  });
-  ```
+```
+String[] permissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE};
+LassePermission.getPermission(this, permissions, new LassePermission.PermissionListener() {
+    @Override
+    public void onRequestResult(boolean allGranted, ArrayList<String> deniedPermissions) {
+        Toast.makeText(MainActivity.this, "getPermission Result : " + allGranted, Toast.LENGTH_SHORT).show();  
+    }
+});
+```
   
 - 오버레이 퍼미션받기
 
-  ```
-  LassePermission.getOverlay(this, new LassePermission.OverlayListener() {
-      @Override
-      public void onCheckCompleted(boolean result) {
-          Toast.makeText(MainActivity.this, "getOverlay Result : " + result, Toast.LENGTH_SHORT).show();
-      }
-  });
-  ```
+```
+LassePermission.getOverlay(this, new LassePermission.OverlayListener() {
+    @Override
+    public void onCheckCompleted(boolean result) {
+        Toast.makeText(MainActivity.this, "getOverlay Result : " + result, Toast.LENGTH_SHORT).show();
+    }
+});
+```
   
 - 사용자통계권한 받기(추가예정)
