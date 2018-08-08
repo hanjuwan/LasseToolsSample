@@ -21,23 +21,23 @@ LasseTools
   
   3 
   
-  
+  ```
   LasseTools.DToast(Activity activity, String string);
-
+  ```
 - 개발자모드 가져오기
-  
+  ```
   LasseTools.getInstance().isDevModeEnabled()
-
+  ```
 - USB디버깅 옵션 가져오기
-  
+  ```
   LasseTools.getInstance().isUsbDebuggingEnabled()
-  
+  ```
 - 크롬디버깅 연결을 통한 기능(캡쳐, 로그수집, 메서드접근(액티비티/프래그먼트))
 
   초기설정 - Application Class 혹은 초기 Activity 에서 
-  
+  ```
   LasseTools.getInstance().init(this, BuildConfig.DEBUG);
-  
+  ```
 
 
 LassePermission
