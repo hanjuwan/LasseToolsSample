@@ -68,6 +68,7 @@ LasseTools.saveLogcat();
 LasseTools.showScreen();
 LasseTools.saveScreen();
 ```
+![showscreen](./images/showscreen.png)
   
   
 
@@ -85,11 +86,7 @@ LasseTools.saveScreen();
   
   ex) 1, 2, 3 으로 메시지를 연속적으로 찍을 시 아래와 같이 같이 표기됩니다.
   
-  1
-  
-  2
-  
-  3 
+  ![toast](./images/toast.png)
   
 ```
 LasseTools.DToast(Activity activity, String string);
