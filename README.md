@@ -21,21 +21,21 @@ LasseTools
 
   // 공통 초기화 설정
 ```
-  LasseTools.getInstance().init(this, BuildConfig.DEBUG);
+LasseTools.getInstance().init(this, BuildConfig.DEBUG);
 ``` 
   메서드 접근을 사용하고자 할 시 Activity or Fragment에서 컨텍스트를 할당
   1) 접근하고자 하는 화면을 추가
-  ```
-  LasseTools.getInstance().setScreen(this);
-  ```
+```
+LasseTools.getInstance().setScreen(this);
+```
   2) 앱실행 및 크롬 Inspect를 실행하여 LasseTools를 클릭
   ![inspect](./images/inspect.png)
   
   3) 스크립트 콘솔에서 
-  ```
-  LasseTools.runMethod("액티비티클래스명", "메서드명");
-  LasseTools.runMethod("액티비티클래스명", "메서드명", "파라메터", "파라메터변수타입(int/String/boolean)")
-  ```
+```
+LasseTools.runMethod("액티비티클래스명", "메서드명");
+LasseTools.runMethod("액티비티클래스명", "메서드명", "파라메터", "파라메터변수타입(int/String/boolean)")
+```
   
   웹에서 로그캣을 보기 / 저장
   1) 앱실행 및 크롬 Inspect를 실행하여 LasseTools를 클릭
@@ -46,12 +46,12 @@ LasseTools
   
   Manifest.permission.READ_EXTERNAL_STORAGE,
   Manifest.permission.WRITE_EXTERNAL_STORAGE
-  ```
-  // 웹에서 로그캣을 보여준다. 
-  LasseTools.showLogcat();
-  // 로그캣의 로그를 핸드폰에 저장 
-  LasseTools.saveLogcat();
-  ```
+```
+// 웹에서 로그캣을 보여준다. 
+LasseTools.showLogcat();
+// 로그캣의 로그를 핸드폰에 저장 
+LasseTools.saveLogcat();
+```
   
   웹에서 앱화면을 캡쳐하여 브라우저에서 보기 
   1) 앱실행 및 크롬 Inspect를 실행하여 LasseTools를 클릭
@@ -62,10 +62,10 @@ LasseTools
   
   Manifest.permission.READ_EXTERNAL_STORAGE,
   Manifest.permission.WRITE_EXTERNAL_STORAGE
-  ```
-  LasseTools.showScreen();
-  LasseTools.saveScreen();
-  ```
+```
+LasseTools.showScreen();
+LasseTools.saveScreen();
+```
   
   
 
@@ -89,17 +89,17 @@ LasseTools
   
   3 
   
-  ```
-  LasseTools.DToast(Activity activity, String string);
-  ```
+```
+LasseTools.DToast(Activity activity, String string);
+```
 - 개발자모드 가져오기
-  ```
-  LasseTools.getInstance().isDevModeEnabled()
-  ```
+```
+LasseTools.getInstance().isDevModeEnabled()
+```
 - USB디버깅 옵션 가져오기
-  ```
-  LasseTools.getInstance().isUsbDebuggingEnabled()
-  ```
+```
+LasseTools.getInstance().isUsbDebuggingEnabled()
+```
 
 
 LassePermission
