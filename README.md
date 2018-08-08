@@ -27,11 +27,13 @@ LasseTools
   LasseTools.getInstance().setScreen(this);
   ```
   2) 앱실행 및 크롬 Inspect를 실행하여 LasseTools를 클릭
+  ![inspect](./images/inspect.png)
+  
   3) 스크립트 콘솔에서 
   ```
   LasseTools.runMethod("액티비티클래스명", "메서드명");
   ```
-![inspect](./images/inspect.png)
+
   
   
 
