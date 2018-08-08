@@ -43,6 +43,8 @@ LasseTools
 LassePermission
 - 런타임 퍼미션 받기
 
+  @예제코드
+  
   String[] permissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE};
   
   LassePermission.getPermission(this, permissions, new LassePermission.PermissionListener() {
@@ -59,6 +61,8 @@ LassePermission
   
 - 오버레이 퍼미션받기
 
+  @예제코드
+  
   LassePermission.getOverlay(this, new LassePermission.OverlayListener() {
   
       @Override
