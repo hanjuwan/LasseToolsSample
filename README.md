@@ -125,4 +125,7 @@ LassePermission.getOverlay(this, new LassePermission.OverlayListener() {
 });
 ```
   
-- 사용자통계권한 받기(추가예정)
+[추가예정기능]
+- 사용자통계권한 받기
+- 개발전용 로그
+- 지정구간에 대한 네트워크 사용량 측정
