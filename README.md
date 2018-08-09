@@ -122,7 +122,7 @@ LassePermission.getPermission(this, permissions, new LassePermission.PermissionL
 
 아래 퍼미션을 메니페스트에 등록해야 폰설정에서 활성화 할 수 있습니다. 
 
-<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+android.permission.SYSTEM_ALERT_WINDOW
 
 
 ```
