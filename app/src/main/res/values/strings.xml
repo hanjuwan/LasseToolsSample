@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">LasseToolsSample</string>
     <string name="action_settings">Settings</string>
+
+    <string name="test1">런타임퍼미션</string>
+    <string name="test2">오버레이권한</string>
+    <string name="test3">사용자통계권한</string>
+    <string name="test4">개발자모드상태</string>
+    <string name="test5">USB디버깅상태</string>
 </resources>

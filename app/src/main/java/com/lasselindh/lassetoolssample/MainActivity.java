@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btTest2).setOnClickListener(this);
         findViewById(R.id.btTest3).setOnClickListener(this);
         findViewById(R.id.btTest4).setOnClickListener(this);
+        findViewById(R.id.btTest5).setOnClickListener(this);
 
         LasseTools.getInstance().init(this, BuildConfig.DEBUG);
         LasseTools.getInstance().setScreen(this);
@@ -89,6 +90,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             }
 
+            case R.id.btTest5:{
+                test5();
+                break;
+            }
+
             default:
                 break;
         }
@@ -115,14 +121,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void test3() {
-        LasseTools.DToast(MainActivity.this, "isDevModeEnabled Result : " + LasseTools.getInstance().isDevModeEnabled());
+        LassePermission.getUsageStats(this, new LassePermission.UsageStatsListener() {
+            @Override
+            public void onCheckCompleted(boolean result) {
+                Toast.makeText(MainActivity.this, "UsageStats Result : " + result, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     public void test4() {
-        LasseTools.DToast(MainActivity.this, "isUsbDebuggingEnabled Result : " + LasseTools.getInstance().isUsbDebuggingEnabled());
+        LasseTools.DToast(MainActivity.this, "isDevModeEnabled Result : " + LasseTools.getInstance().isDevModeEnabled());
     }
 
-    private void test5() {
-        LasseTools.DToast(MainActivity.this, "Execute private method : Success");
+    public void test5() {
+        LasseTools.DToast(MainActivity.this, "isUsbDebuggingEnabled Result : " + LasseTools.getInstance().isUsbDebuggingEnabled());
     }
 }

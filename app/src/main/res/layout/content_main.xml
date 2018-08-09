@@ -17,24 +17,30 @@
             android:id="@+id/btTest1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="권한"/>
+            android:text="@string/test1"/>
 
         <Button
             android:id="@+id/btTest2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="오버레이"/>
+            android:text="@string/test2"/>
 
         <Button
             android:id="@+id/btTest3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="개발자모드"/>
+            android:text="@string/test3"/>
 
         <Button
             android:id="@+id/btTest4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="USB디버깅"/>
+            android:text="@string/test4"/>
+
+        <Button
+            android:id="@+id/btTest5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/test5"/>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
