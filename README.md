@@ -136,8 +136,28 @@ LassePermission.getOverlay(this, new LassePermission.OverlayListener() {
     }
 });
 ```
+
+- 사용자통계권한 퍼미션받기
+
+아래 퍼미션을 메니페스트에 등록해야 폰설정에서 활성화 할 수 있습니다. 
+
+android.permission.PACKAGE_USAGE_STATS
+
+
+```
+// 시스템 퍼미션이 요구되므로 ignore처리가 필요
+<uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+        
+LassePermission.getUsageStats(this, new LassePermission.UsageStatsListener() {
+    @Override
+    public void onCheckCompleted(boolean result) {
+        Toast.makeText(MainActivity.this, "UsageStatsListener Result : " + result, Toast.LENGTH_SHORT).show();
+    }
+});
+```
   
 [추가예정기능]
-- 사용자통계권한 받기
 - 개발전용 로그
 - 지정구간에 대한 네트워크 사용량 측정
