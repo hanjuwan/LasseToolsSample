@@ -111,6 +111,7 @@ LasseTools.getInstance().isUsbDebuggingEnabled()
 LassePermission
 - 런타임 퍼미션 받기
 
+**퍼미션 라이브러리는 테드퍼미션이 짱입니다.**
 
 
 ```
