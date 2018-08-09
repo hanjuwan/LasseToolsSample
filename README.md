@@ -106,6 +106,8 @@ LasseTools.getInstance().isUsbDebuggingEnabled()
 LassePermission
 - 런타임 퍼미션 받기
 
+
+
 ```
 String[] permissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE};
 LassePermission.getPermission(this, permissions, new LassePermission.PermissionListener() {
@@ -117,6 +119,11 @@ LassePermission.getPermission(this, permissions, new LassePermission.PermissionL
 ```
   
 - 오버레이 퍼미션받기
+
+아래 퍼미션을 메니페스트에 등록해야 폰설정에서 활성화 할 수 있습니다. 
+
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
 
 ```
 LassePermission.getOverlay(this, new LassePermission.OverlayListener() {
