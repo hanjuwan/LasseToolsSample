@@ -3,7 +3,7 @@ LasseTools는 앱개발에 도움?을 주는 여러가지 유틸기능과 디버
 
 웹뷰 크롬디버깅 및 자바리플렉션을 활용하여 스크립트를 이용하여 여러가지 디버깅 기능을 수행하고 
 
-스크립트를 통해 자바 메서드에 접근가능한 기능을 제공합니다.
+스크립트를 통해 자바 메소드에 접근가능한 기능을 제공합니다.
 
 
 [ ![Download](https://api.bintray.com/packages/hanjuwan/maven/tools/images/download.svg) ](https://bintray.com/hanjuwan/maven/tools/_latestVersion)
@@ -18,7 +18,7 @@ dependenciesdepend  {
 LasseTools
 
 
-- 크롬디버깅 연결을 통한 기능(캡쳐, 로그수집, 메서드접근(액티비티/프래그먼트))
+- 크롬디버깅 연결을 통한 기능(캡쳐, 로그수집, 메소드접근(액티비티/프래그먼트))
 
 
   // 공통 초기화 설정
@@ -26,27 +26,30 @@ LasseTools
 LasseTools.getInstance().init(this, BuildConfig.DEBUG);
 ``` 
   메서드 접근을 사용하고자 할 시 Activity or Fragment에서 컨텍스트를 할당
-  1) 접근하고자 하는 화면을 추가
+  1) 접근하고자 하는 화면을 추가합니다.
 ```
 LasseTools.getInstance().setScreen(this);
 ```
   2) 앱실행 및 크롬 Inspect를 실행하여 LasseTools를 클릭
   ![inspect](./images/inspect.png)
   
-  3) 스크립트 콘솔에서 
+  3) 스크립트 콘솔에서 아래 명령어를 통해 메소드에 접근합니다.(public 만 가능)
 ```
-LasseTools.runMethod("액티비티클래스명", "메서드명");
-LasseTools.runMethod("액티비티클래스명", "메서드명", "파라메터", "파라메터변수타입(int/String/boolean)")
+LasseTools.runMethod("액티비티클래스명", "메소드명");
+LasseTools.runMethod("액티비티클래스명", "메소드명", "파라메터", "파라메터변수타입(int/String/boolean)")
 ```
   ![console](./images/console.png)
   
   
-  웹에서 로그캣을 보기 / 저장
+  웹에서 로그캣을 보기 / 저장 , 개발앱에서 테스트하다가 죽었는데 로그캣연결을 하지 않으셨나요? 
+  
+  이제 죽은앱도 로그를 가져올 수 있습니다.
+  
   1) 앱실행 및 크롬 Inspect를 실행하여 LasseTools를 클릭
   
   2) 웹콘솔에서 아래 명령어 수행
   
-  3) 아래권한이 필요하므로 메니페스트에 등록해주어야 한다.
+  3) 아래권한이 필요하므로 메니페스트에 등록해주어야 합니다.
   
   Manifest.permission.READ_EXTERNAL_STORAGE,
   Manifest.permission.WRITE_EXTERNAL_STORAGE
@@ -62,7 +65,7 @@ LasseTools.saveLogcat();
   
   2) 웹콘솔에서 아래 명령어 수행
   
-  3) 아래권한이 필요하므로 메니페스트에 등록해주어야 한다.
+  3) 아래권한이 필요하므로 메니페스트에 등록해주어야 합니다.
   
   Manifest.permission.READ_EXTERNAL_STORAGE,
   Manifest.permission.WRITE_EXTERNAL_STORAGE
