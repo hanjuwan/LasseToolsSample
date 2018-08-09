@@ -56,7 +56,7 @@ LasseTools.runMethod("액티비티클래스명", "메소드명", "파라메터",
 ```
 // 웹에서 로그캣을 보여준다. 
 LasseTools.showLogcat();
-// 로그캣의 로그를 핸드폰에 저장 
+// 로그캣의 로그를 핸드폰에 저장 (Documents 폴더)
 LasseTools.saveLogcat();
 ```
   
@@ -70,8 +70,10 @@ LasseTools.saveLogcat();
   Manifest.permission.READ_EXTERNAL_STORAGE,
   Manifest.permission.WRITE_EXTERNAL_STORAGE
 ```
+// 스샷화면을 
 LasseTools.showScreen();
-LasseTools.saveScreen();
+// 스샷화면을 핸드폰에 저장 (Documents 폴더)
+LasseTools.saveScreen(); 
 ```
 ![showscreen](./images/showscreen.png)
   
